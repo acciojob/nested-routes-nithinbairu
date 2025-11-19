@@ -10,7 +10,7 @@ const Women = ({items}) => {
             <ul>
             {
                 items.map((item)=>{
-                    return <li key={item.id}><Link to={`/women/${item.id}`}>{item.item}</Link></li>
+                    return <li key={item.id} data-testid={`item-link-${item.id}`}><Link to={`/women/${item.id}`} data-testid={`item-link-${item.id}`}>{item.item}</Link></li>
                 })
             }
             </ul>

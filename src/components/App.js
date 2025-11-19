@@ -11,7 +11,8 @@ const App = () => {
   console.log(women);
   return (
     <BrowserRouter>
-      <nav>
+      <main>
+        <nav>
         <ul>
           <li><Link to="/" onClick={()=>setWomen(false)}>Home</Link></li>
         <li><Link to="/women" onClick={()=>setWomen(true)}>Women</Link></li>          
@@ -22,6 +23,8 @@ const App = () => {
   <Route exact path="/women" component={() => <Women items={items} />} />
   <Route exact path="/" component={Home} />
 </Switch>
+      </main>
+
     </BrowserRouter>
   )
 }
